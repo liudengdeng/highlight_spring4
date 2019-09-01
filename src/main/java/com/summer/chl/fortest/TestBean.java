@@ -12,6 +12,6 @@ public class TestBean {
     private String content;
 
     public TestBean(String content) {
-        this.content = content;
+        super();this.content = content;
     }
 }

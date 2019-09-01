@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {TestConfig.class})
-@ActiveProfiles("prd")
+@ActiveProfiles("dev")
 public class DemoBeanIntegrationTests {
     @Autowired
     private TestBean testBean;
@@ -19,6 +19,7 @@ public class DemoBeanIntegrationTests {
     public void prdBeanShouldInject() {
         String expected = "prd profile";
         String actual = testBean.getContent();
+        System.out.println(actual);
         Assert.assertEquals(expected, actual);
     }
 }
